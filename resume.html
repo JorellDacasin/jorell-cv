@@ -64,11 +64,11 @@
   .job{margin-bottom:22px;display:flex;gap:12px;}
   .job:last-child{margin-bottom:0;}
   .job-logo{
-    width:34px;height:34px;border-radius:8px;flex-shrink:0;margin-top:2px;
+    width:34px;height:34px;border-radius:9px;flex-shrink:0;margin-top:2px;
     display:flex;align-items:center;justify-content:center;
-    background:#f3f5f7;border:1px dashed var(--line);overflow:hidden;
+    background:#fff;border:1px solid var(--line);overflow:hidden;
   }
-  .job-logo img{width:100%;height:100%;object-fit:cover;}
+  .job-logo img{width:100%;height:100%;object-fit:contain;padding:3px;}
   .job-body{flex:1;min-width:0;}
   .job-title{font-size:1rem;font-weight:700;color:var(--navy);margin:0 0 2px;}
   .job-company{font-weight:600;}
@@ -96,9 +96,9 @@
   .cert-logo{
     width:28px;height:28px;border-radius:7px;
     display:flex;align-items:center;justify-content:center;
-    background:#f3f5f7;border:1px dashed var(--line);overflow:hidden;
+    background:#fff;border:1px solid var(--line);overflow:hidden;
   }
-  .cert-logo img{width:100%;height:100%;object-fit:contain;}
+  .cert-logo img{width:100%;height:100%;object-fit:contain;padding:3px;}
 
   .lang-row, .plain-list{font-size:0.88rem;}
   .lang-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line);}
@@ -164,7 +164,7 @@
       </div>
 
       <div class="job">
-        <div class="job-logo"><img src="assets/logos/aeven.png" alt="Aeven" onerror="this.style.display='none'"></div>
+        <div class="job-logo"><img src="assets/logos/aeven.jpg" alt="Aeven" onerror="this.style.display='none'"></div>
         <div class="job-body">
         <p class="job-title">Advanced Cloud Engineer</p>
         <p class="job-company">Novo Nordisk IT (Aeven)</p>
@@ -297,12 +297,16 @@
     <section>
       <h2 class="section-title">Certifications</h2>
       <table class="plain-table">
-        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/microsoft.png" alt="Microsoft" onerror="this.style.display='none'"></div></td><td>Microsoft Certified: DevOps Engineer Expert — Microsoft</td><td class="right">2025</td></tr>
-        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/microsoft.png" alt="Microsoft" onerror="this.style.display='none'"></div></td><td>Microsoft Certified: Azure Administrator Associate — Microsoft</td><td class="right">2025</td></tr>
-        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/microsoft.png" alt="Microsoft" onerror="this.style.display='none'"></div></td><td>Microsoft Certified: Azure Fundamentals — Microsoft</td><td class="right">2023</td></tr>
-        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/google.png" alt="Google" onerror="this.style.display='none'"></div></td><td>Google Cloud Engineer — Google</td><td class="right">2020</td></tr>
-        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/corda.png" alt="R3 Corda" onerror="this.style.display='none'"></div></td><td>Corda Certified Developer — R3</td><td class="right">2022</td></tr>
-        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/ibm.png" alt="IBM" onerror="this.style.display='none'"></div></td><td>IBM Certified Application Developer: Watson V3 — IBM</td><td class="right">2018</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/centroid.png" alt="Centroid Solutions" onerror="this.style.display='none'"></div></td><td>CS 360 Bridge Certified Professional — Centroid Solutions</td><td class="right">2026</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/cpd.png" alt="The CPD Certification Service" onerror="this.style.display='none'"></div></td><td>Certified Lean Six Sigma Black Belt — The CPD Certification Service</td><td class="right">2026</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/cpd.png" alt="The CPD Certification Service" onerror="this.style.display='none'"></div></td><td>Certified Lean Six Sigma Green Belt — The CPD Certification Service</td><td class="right">2026</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/cpd.png" alt="The CPD Certification Service" onerror="this.style.display='none'"></div></td><td>Certified Lean Six Sigma Yellow Belt — The CPD Certification Service</td><td class="right">2026</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/microsoft.svg" alt="Microsoft" onerror="this.style.display='none'"></div></td><td>Microsoft Certified: DevOps Engineer Expert — Microsoft</td><td class="right">2025</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/microsoft.svg" alt="Microsoft" onerror="this.style.display='none'"></div></td><td>Microsoft Certified: Azure Administrator Associate — Microsoft</td><td class="right">2025</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/microsoft.svg" alt="Microsoft" onerror="this.style.display='none'"></div></td><td>Microsoft Certified: Azure Fundamentals — Microsoft</td><td class="right">2023</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/google.svg" alt="Google" onerror="this.style.display='none'"></div></td><td>Google Cloud Engineer — Google</td><td class="right">2020</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/corda.svg" alt="R3 Corda" onerror="this.style.display='none'"></div></td><td>Corda Certified Developer — R3</td><td class="right">2022</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/ibm.svg" alt="IBM" onerror="this.style.display='none'"></div></td><td>IBM Certified Application Developer: Watson V3 — IBM</td><td class="right">2018</td></tr>
         <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/oracle.png" alt="Oracle" onerror="this.style.display='none'"></div></td><td>Oracle SOA Suite 12C Implementation Specialist — Oracle</td><td class="right">2017</td></tr>
       </table>
     </section>
@@ -310,6 +314,7 @@
     <section>
       <h2 class="section-title">Trainings / Continuous Improvement</h2>
       <table class="plain-table">
+        <tr><td>Centroid Bridge Training — Centroid Solutions</td><td class="right">2025</td></tr>
         <tr><td>Accelerating Development using AI Copilot — Aeven - Microsoft</td><td class="right">2025</td></tr>
         <tr><td>Terraform Basics — Aeven</td><td class="right">2024</td></tr>
         <tr><td>Azure Fundamentals — Aeven</td><td class="right">November 2023</td></tr>
