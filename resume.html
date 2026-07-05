@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jorell Dacasin — CV</title>
+<title>Jorell Dacasin — Resume</title>
 <style>
   :root{
     --navy:#173250;
@@ -20,175 +20,96 @@
     background:var(--bg);
     font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color:var(--text);
-    line-height:1.5;
+    line-height:1.55;
   }
   .page{
-    max-width:1000px;
+    max-width:800px;
     margin:32px auto;
     background:#fff;
     box-shadow:0 4px 24px rgba(0,0,0,0.12);
   }
 
-  /* ---------- Header ---------- */
   header{
     background:linear-gradient(135deg,var(--navy),var(--navy-dark));
     color:#fff;
-    padding:36px 44px;
+    padding:32px 40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:24px;
   }
-  header h1{
-    margin:0 0 4px;
-    font-size:2.4rem;
-    letter-spacing:1px;
-    font-weight:700;
-  }
-  header .title{
-    font-size:1.05rem;
-    color:#bcd3e6;
-    margin:0 0 18px;
-    font-weight:500;
-  }
-  .contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    row-gap:8px;
-    column-gap:36px;
-    font-size:0.9rem;
-  }
-  .contact-grid a{color:#79c1f2;text-decoration:underline;text-underline-offset:2px;}
-  .contact-grid a:hover{color:#a9dbff;}
-  .contact-item{display:flex;align-items:center;gap:8px;color:#dceaf5;}
-  .contact-item svg{flex-shrink:0;opacity:0.85;}
-  .client-name{color:var(--accent);text-decoration:underline;text-underline-offset:2px;}
-  a.client-name:hover{color:var(--navy);}
-  .job-company a{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:2px;}
-  .job-company a:hover{color:var(--accent);}
-  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  header h1{margin:0 0 4px;font-size:2.1rem;letter-spacing:1px;font-weight:700;}
+  header .title{font-size:1rem;color:#bcd3e6;margin:0 0 14px;font-weight:500;}
+  .contact-row{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:0.85rem;}
+  .contact-row a{color:#79c1f2;text-decoration:underline;text-underline-offset:2px;}
+  .contact-row span{color:#dceaf5;}
   .photo-wrap{
-    width:118px;
-    height:118px;
-    border-radius:50%;
-    overflow:hidden;
-    border:3px solid rgba(255,255,255,0.35);
-    flex-shrink:0;
-    background:#0e2337;
+    width:96px;height:96px;border-radius:50%;overflow:hidden;
+    border:3px solid rgba(255,255,255,0.35);flex-shrink:0;background:#0e2337;
   }
   .photo-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
 
-  /* ---------- Body layout ---------- */
-  .body-grid{
-    display:grid;
-    grid-template-columns:1.75fr 1fr;
-    gap:44px;
-    padding:36px 44px 52px;
-  }
-  @media (max-width:720px){
-    .body-grid{grid-template-columns:1fr;}
-    header{flex-direction:column;align-items:flex-start;}
-    .photo-wrap{align-self:center;}
-  }
-
-  section{margin-bottom:30px;}
-  section:last-child{margin-bottom:0;}
-
+  main{padding:8px 40px 44px;}
+  section{margin-bottom:26px;}
   h2.section-title{
-    font-size:0.95rem;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    color:var(--navy);
-    font-weight:700;
-    margin:0 0 14px;
-    padding-bottom:8px;
+    font-size:0.9rem;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--navy);font-weight:700;margin:0 0 12px;padding-bottom:7px;
     border-bottom:2.5px solid var(--accent);
   }
+  section:first-of-type h2.section-title{margin-top:26px;}
 
-  .summary p{margin:0 0 12px;color:var(--muted);font-size:0.93rem;}
+  .summary p{margin:0 0 10px;color:var(--muted);font-size:0.92rem;}
   .summary p:last-child{margin-bottom:0;}
 
-  /* ---------- Work experience timeline ---------- */
-  .timeline-item{display:flex;gap:16px;}
-  .timeline-marker{display:flex;flex-direction:column;align-items:center;width:34px;flex-shrink:0;}
-  .timeline-marker .dot{
-    width:34px;height:34px;border-radius:50%;
+  .job{margin-bottom:22px;display:flex;gap:12px;}
+  .job:last-child{margin-bottom:0;}
+  .job-logo{
+    width:34px;height:34px;border-radius:8px;flex-shrink:0;margin-top:2px;
     display:flex;align-items:center;justify-content:center;
-    background:#f3f5f7;border:1px dashed var(--line);
-    overflow:hidden;flex-shrink:0;
+    background:#f3f5f7;border:1px dashed var(--line);overflow:hidden;
   }
-  .timeline-marker .dot img{width:100%;height:100%;object-fit:cover;}
-  .timeline-marker .line{
-    flex:1;width:2px;min-height:18px;
-    background-image:linear-gradient(var(--line) 60%, rgba(0,0,0,0) 0%);
-    background-position:left;
-    background-size:2px 8px;
-    background-repeat:repeat-y;
-    margin-top:4px;
-  }
-  .timeline-item:last-child .timeline-marker .line{display:none;}
-  .timeline-content{padding-bottom:26px;}
-  .job-title{font-size:1.02rem;font-weight:700;color:var(--navy);margin:2px 0 2px;}
-  .job-company{font-weight:600;color:var(--text);}
-  .job-meta{
-    display:flex;flex-wrap:wrap;gap:14px;
-    font-size:0.82rem;color:var(--muted);margin:4px 0 6px;
-  }
-  .job-meta span{display:inline-flex;align-items:center;gap:5px;}
-  .job-meta svg{opacity:0.7;}
+  .job-logo img{width:100%;height:100%;object-fit:cover;}
+  .job-body{flex:1;min-width:0;}
+  .job-title{font-size:1rem;font-weight:700;color:var(--navy);margin:0 0 2px;}
+  .job-company{font-weight:600;}
+  .job-meta{font-size:0.82rem;color:var(--muted);margin:2px 0 4px;}
   .job-client{font-style:italic;font-size:0.85rem;color:var(--muted);margin:0 0 8px;}
-  ul.bullets{margin:0;padding-left:18px;font-size:0.88rem;color:var(--text);}
-  ul.bullets li{margin-bottom:6px;}
+  .job-client a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;}
+  .job-company a{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:2px;}
+  ul.bullets{margin:0;padding-left:18px;font-size:0.88rem;}
+  ul.bullets li{margin-bottom:5px;}
   ul.bullets li:last-child{margin-bottom:0;}
-  ul.bullets li.skills{list-style:none;margin-left:-18px;margin-top:8px;font-size:0.85rem;color:var(--muted);}
+  ul.bullets li.skills{list-style:none;margin-left:-18px;margin-top:6px;font-size:0.85rem;color:var(--muted);}
   ul.bullets li.skills strong{color:var(--navy);}
 
-  /* ---------- Right column lists ---------- */
-  .entry{
-    padding:12px 0;
-    border-bottom:1px dashed var(--line);
-  }
-  .entry:last-child{border-bottom:none;padding-bottom:0;}
-  .entry:first-child{padding-top:0;}
-  .entry-title{font-weight:700;color:var(--navy);font-size:0.92rem;margin:0 0 2px;}
-  .entry-sub{font-weight:600;font-size:0.85rem;color:var(--text);margin:0 0 4px;}
-  .entry-meta{display:flex;gap:14px;font-size:0.78rem;color:var(--muted);flex-wrap:wrap;}
-  .entry-meta span{display:inline-flex;align-items:center;gap:5px;}
+  .grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:6px 32px;}
+  @media (max-width:560px){.grid-2col{grid-template-columns:1fr;}}
+  .entry-title{font-weight:700;color:var(--navy);font-size:0.9rem;margin:0 0 2px;}
+  .entry-sub{font-size:0.85rem;color:var(--text);margin:0 0 2px;}
+  .entry-meta{font-size:0.78rem;color:var(--muted);margin:0 0 10px;}
 
-  .cert-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);}
-  .cert-item:last-child{border-bottom:none;padding-bottom:0;}
-  .cert-item:first-child{padding-top:0;}
-  .cert-icon{
-    width:40px;height:40px;border-radius:10px;flex-shrink:0;
+  table.plain-table{border-collapse:collapse;width:100%;font-size:0.85rem;}
+  table.plain-table td{padding:5px 0;border-bottom:1px dashed var(--line);vertical-align:middle;}
+  table.plain-table tr:last-child td{border-bottom:none;}
+  table.plain-table td.right{text-align:right;white-space:nowrap;padding-left:16px;color:var(--muted);}
+  table.plain-table td.logo-cell{width:34px;padding-right:10px;}
+  .cert-logo{
+    width:28px;height:28px;border-radius:7px;
     display:flex;align-items:center;justify-content:center;
-    background:#f3f5f7;border:1px dashed var(--line);
-    overflow:hidden;
+    background:#f3f5f7;border:1px dashed var(--line);overflow:hidden;
   }
-  .cert-icon img{width:100%;height:100%;object-fit:contain;}
-  .cert-title{font-weight:700;color:var(--navy);font-size:0.85rem;margin:0 0 2px;}
-  .cert-org{font-size:0.8rem;color:var(--text);margin:0 0 2px;}
-  .cert-year{font-size:0.76rem;color:var(--muted);display:flex;align-items:center;gap:5px;}
+  .cert-logo img{width:100%;height:100%;object-fit:contain;}
 
-  .training-item{padding:10px 0;border-bottom:1px dashed var(--line);}
-  .training-item:last-child{border-bottom:none;padding-bottom:0;}
-  .training-item:first-child{padding-top:0;}
-  .training-title{font-weight:700;font-size:0.85rem;color:var(--navy);margin:0 0 2px;}
-  .training-org{font-size:0.78rem;color:var(--muted);}
+  .lang-row, .plain-list{font-size:0.88rem;}
+  .lang-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line);}
+  .lang-row:last-child{border-bottom:none;}
 
-  .lang-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:0.88rem;}
-  .lang-row:last-child{border-bottom:none;padding-bottom:0;}
-  .lang-row:first-child{padding-top:0;}
-  .lang-row .level{color:var(--muted);}
+  footer{text-align:center;font-size:0.78rem;color:var(--muted);padding:16px 0 28px;}
+  footer a{color:var(--muted);}
 
-  ul.plain{margin:0;padding-left:18px;font-size:0.88rem;}
-  ul.plain li{margin-bottom:6px;}
-  ul.plain li:last-child{margin-bottom:0;}
-
-  footer{
-    text-align:center;
-    font-size:0.78rem;
-    color:var(--muted);
-    padding:18px 0 30px;
+  @media print{
+    body{background:#fff;}
+    .page{box-shadow:none;margin:0;max-width:100%;}
   }
 </style>
 </head>
@@ -199,23 +120,11 @@
     <div>
       <h1>JORELL DACASIN</h1>
       <p class="title">Cloud | DevOps | MLOps | SRE | Software Engineer</p>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <a href="tel:+971582507003">+971 58 250 7003</a>
-        </div>
-        <div class="contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6z"/><path d="M22 6l-10 7L2 6"/></svg>
-          <a href="mailto:jorelldacasin@gmail.com">jorelldacasin@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-          <a href="https://www.linkedin.com/in/jorell-dacasin/" target="_blank" rel="noopener">linkedin.com/in/jorell-dacasin</a>
-        </div>
-        <div class="contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Dubai, United Arab Emirates
-        </div>
+      <div class="contact-row">
+        <span>+971 58 250 7003</span>
+        <span><a href="mailto:jorelldacasin@gmail.com">jorelldacasin@gmail.com</a></span>
+        <span><a href="https://www.linkedin.com/in/jorell-dacasin/" target="_blank" rel="noopener">linkedin.com/in/jorell-dacasin</a></span>
+        <span>Dubai, United Arab Emirates</span>
       </div>
     </div>
     <div class="photo-wrap">
@@ -223,308 +132,224 @@
     </div>
   </header>
 
-  <div class="body-grid">
+  <main>
 
-    <!-- ===================== LEFT COLUMN ===================== -->
-    <div class="col-main">
+    <section class="summary">
+      <h2 class="section-title">Profile Summary</h2>
+      <p>Jorell is an experienced IT professional with 10 years of combined experience in Cloud Services (Azure, AWS and GCP), Oracle and Mulesoft Integration services, Windows and Linux Administration, and IT Operations technology.</p>
+      <p>His commitment to adopting best practices has allowed him to work with a wide range of tools. These include Infrastructure as Code (IaC) tools like Terraform for provisioning infrastructure through code and CI/CD tools like Azure DevOps and Jenkins for automating builds and deployments, ensuring fully automated Continuous Integration (CI) and Continuous Delivery (CD) processes.</p>
+    </section>
 
-      <section class="summary">
-        <h2 class="section-title">Profile Summary</h2>
-        <p>Jorell is an experienced IT professional with 10 years of combined experience in Cloud Services (Azure, AWS and GCP), Oracle and Mulesoft Integration services, Windows and Linux Administration, and IT Operations technology.</p>
-        <p>His commitment to adopting best practices has allowed him to work with a wide range of tools. These include Infrastructure as Code (IaC) tools like Terraform for provisioning infrastructure through code and CI/CD tools like Azure DevOps and Jenkins for automating builds and deployments, ensuring fully automated Continuous Integration (CI) and Continuous Delivery (CD) processes.</p>
-      </section>
+    <section>
+      <h2 class="section-title">Work Experience</h2>
 
-      <section>
-        <h2 class="section-title">Work Experience</h2>
-
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="dot">
-              <img src="assets/logos/centroid.png" alt="Centroid Solutions" onerror="this.style.display='none'">
-            </div>
-            <div class="line"></div>
-          </div>
-          <div class="timeline-content">
-            <div class="job-title">Application Engineer - Devops</div>
-            <div class="job-company">Centroid Solutions, DMCC</div>
-            <div class="job-meta">
-              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>02/2025 – Present</span>
-            </div>
-            <p class="job-client">Client: Brokers and Liquidity Providers; <a class="client-name" href="https://centroidsol.com/" target="_blank" rel="noopener">Dubai FinTech Company</a></p>
-            <ul class="bullets">
-              <li>IT and Application Support Engineer that provides technical assistance, ensures optimal performance, and delivers exceptional service to clients using the company's Core Trading Products and Applications (Bridge, Host and Risk Management).</li>
-              <li>Managed Windows Infrastructure and configurations for MetaTrader5 and MetaTrader4 applications for API and services integration.</li>
-              <li>Managed network aspects of each virtual machine and bare metal server including but not limited to TCP/IP, Firewall Whitelisting at OS and ISP (Internet Service Provider) levels.</li>
-              <li>Provided additional manpower that resolved around 20-25% of average daily tickets within SLA range.</li>
-              <li>Applied ML-based log analysis and monitoring across trading platform logs, server health, and ticket volume to proactively surface anomalies and reduce incident response time.</li>
-              <li>Automated configuration generation for broker and liquidity provider onboarding using GitHub Copilot and the Claude API, supporting setup for around 35-40 Brokers and Liquidity Providers with minimal to no supervision upon start.</li>
-              <li>Set up and maintained infrastructure and pipelines for GPT-based models on Azure and AWS VMs, extending cloud DevOps and MLOps practices into the trading environment.</li>
-              <li class="skills"><strong>KEY SKILLS:</strong> Azure Cloud VM, AWS EC2, Zare, Vultr and LD4 Servers, Linux and Windows Administration, Network Configuration, ML-based Monitoring &amp; Log Analysis, GitHub Copilot, Claude API, GPT Model Infrastructure, Jira, Confluence, ServiceNow SDLC.</li>
-            </ul>
-          </div>
+      <div class="job">
+        <div class="job-logo"><img src="assets/logos/centroid.png" alt="Centroid Solutions" onerror="this.style.display='none'"></div>
+        <div class="job-body">
+        <p class="job-title">Application Engineer - Devops</p>
+        <p class="job-company">Centroid Solutions, DMCC</p>
+        <p class="job-meta">02/2025 – Present</p>
+        <p class="job-client">Client: Brokers and Liquidity Providers; <a href="https://centroidsol.com/" target="_blank" rel="noopener">Dubai FinTech Company</a></p>
+        <ul class="bullets">
+          <li>IT and Application Support Engineer that provides technical assistance, ensures optimal performance, and delivers exceptional service to clients using the company's Core Trading Products and Applications (Bridge, Host and Risk Management).</li>
+          <li>Managed Windows Infrastructure and configurations for MetaTrader5 and MetaTrader4 applications for API and services integration.</li>
+          <li>Managed network aspects of each virtual machine and bare metal server including but not limited to TCP/IP, Firewall Whitelisting at OS and ISP (Internet Service Provider) levels.</li>
+          <li>Provided additional manpower that resolved around 20-25% of average daily tickets within SLA range.</li>
+          <li>Applied ML-based log analysis and monitoring across trading platform logs, server health, and ticket volume to proactively surface anomalies and reduce incident response time.</li>
+          <li>Automated configuration generation for broker and liquidity provider onboarding using GitHub Copilot and the Claude API, supporting setup for around 35-40 Brokers and Liquidity Providers with minimal to no supervision upon start.</li>
+          <li>Set up and maintained infrastructure and pipelines for GPT-based models on Azure and AWS VMs, extending cloud DevOps and MLOps practices into the trading environment.</li>
+          <li class="skills"><strong>KEY SKILLS:</strong> Azure Cloud VM, AWS EC2, Zare, Vultr and LD4 Servers, Linux and Windows Administration, Network Configuration, ML-based Monitoring &amp; Log Analysis, GitHub Copilot, Claude API, GPT Model Infrastructure, Jira, Confluence, ServiceNow SDLC.</li>
+        </ul>
         </div>
+      </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="dot">
-              <img src="assets/logos/aeven.png" alt="Aeven" onerror="this.style.display='none'">
-            </div>
-            <div class="line"></div>
-          </div>
-          <div class="timeline-content">
-            <div class="job-title">Advanced Cloud Engineer</div>
-            <div class="job-company">Novo Nordisk IT (Aeven)</div>
-            <div class="job-meta">
-              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>11/2023 – 06/2025</span>
-            </div>
-            <p class="job-client">Client: <a class="client-name" href="https://www.novonordisk.com/" target="_blank" rel="noopener">Pharmaceutical Company</a> (<a class="client-name" href="https://www.microsoft.com/en/customers/story/18752-novo-nordisk-azure" target="_blank" rel="noopener">Novo Nordisk – Microsoft</a>)</p>
-            <ul class="bullets">
-              <li>Managed and enhanced terraform scripts to set up Azure Infrastructure Resources for Data Scientists including Azure Machine Learning, Virtual Machines, Compute Instances and Compute Clusters, Open-AI models, Container Registries, Virtual Network, Storage accounts and datasets.</li>
-              <li>Part of the MLOps team that enabled Data Scientists to use LLMs (Large Language Models), Azure Machine Learning and OpenAI instances in PROD. Onboarded Machine Learning users, groups and owners with their roles (RBAC) and security groups using Azure DevOps as CI/CD tool, terraform and shell scripts.</li>
-              <li>Debugged and provided resolutions to issues in AML Notebooks using Python scripts.</li>
-              <li>Achieved Machine Learning Infrastructure automation objectives at almost 80% functionality within product iteration scope.</li>
-              <li>Enabled containerization and execution of ML workloads to allow researchers to use Gefion Pilot (POC).</li>
-              <li>Upgraded build agents including Nessus, Splunk and Security patching to remediate vulnerability reports and update AKS and EKS versions of managed services in Azure and AWS environments, respectively.</li>
-              <li>Contributed to Sprint Discussions with Scrum Master and Cloud Architect counterparts in Denmark to discuss and plan weekly and iteration task targets.</li>
-              <li class="skills"><strong>KEY SKILLS:</strong> Azure Cloud, AWS Cloud, Terraform Modules, Python, Kubernetes, Kubectl, Shell, Linux and Windows Administration, Azure Resource Management, Large Language Models, MLOps, OpenAI, Network Configuration, Nessus, Splunk, Scrum using Azure Boards, ServiceNow SDLC.</li>
-            </ul>
-          </div>
+      <div class="job">
+        <div class="job-logo"><img src="assets/logos/aeven.png" alt="Aeven" onerror="this.style.display='none'"></div>
+        <div class="job-body">
+        <p class="job-title">Advanced Cloud Engineer</p>
+        <p class="job-company">Novo Nordisk IT (Aeven)</p>
+        <p class="job-meta">11/2023 – 06/2025</p>
+        <p class="job-client">Client: <a href="https://www.novonordisk.com/" target="_blank" rel="noopener">Pharmaceutical Company</a> (<a href="https://www.microsoft.com/en/customers/story/18752-novo-nordisk-azure" target="_blank" rel="noopener">Novo Nordisk – Microsoft</a>)</p>
+        <ul class="bullets">
+          <li>Managed and enhanced terraform scripts to set up Azure Infrastructure Resources for Data Scientists including Azure Machine Learning, Virtual Machines, Compute Instances and Compute Clusters, Open-AI models, Container Registries, Virtual Network, Storage accounts and datasets.</li>
+          <li>Part of the MLOps team that enabled Data Scientists to use LLMs (Large Language Models), Azure Machine Learning and OpenAI instances in PROD. Onboarded Machine Learning users, groups and owners with their roles (RBAC) and security groups using Azure DevOps as CI/CD tool, terraform and shell scripts.</li>
+          <li>Debugged and provided resolutions to issues in AML Notebooks using Python scripts.</li>
+          <li>Achieved Machine Learning Infrastructure automation objectives at almost 80% functionality within product iteration scope.</li>
+          <li>Enabled containerization and execution of ML workloads to allow researchers to use Gefion Pilot (POC).</li>
+          <li>Upgraded build agents including Nessus, Splunk and Security patching to remediate vulnerability reports and update AKS and EKS versions of managed services in Azure and AWS environments, respectively.</li>
+          <li>Contributed to Sprint Discussions with Scrum Master and Cloud Architect counterparts in Denmark to discuss and plan weekly and iteration task targets.</li>
+          <li class="skills"><strong>KEY SKILLS:</strong> Azure Cloud, AWS Cloud, Terraform Modules, Python, Kubernetes, Kubectl, Shell, Linux and Windows Administration, Azure Resource Management, Large Language Models, MLOps, OpenAI, Network Configuration, Nessus, Splunk, Scrum using Azure Boards, ServiceNow SDLC.</li>
+        </ul>
         </div>
+      </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="dot">
-              <img src="assets/logos/capgemini.png" alt="Capgemini" onerror="this.style.display='none'">
-            </div>
-            <div class="line"></div>
-          </div>
-          <div class="timeline-content">
-            <div class="job-title">Sr. Integration Consultant - Developer</div>
-            <div class="job-company"><a href="https://www.capgemini.com/" target="_blank" rel="noopener">Capgemini</a></div>
-            <div class="job-meta">
-              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>08/2023 – 10/2023</span>
-            </div>
-            <p class="job-client">Internal Contract Project (Part-time)</p>
-            <ul class="bullets">
-              <li>Improved and streamlined client integration by building API endpoints using Salesforce's Mulesoft Anypoint Platform.</li>
-              <li>Completed design and requirements for an LOB (Line of Business) using the concept of API Led Connectivity — request-to-response presentation in API Design Center (RAML), published via Anypoint Platform Exchange.</li>
-              <li>Deployed APIs as microservices using Azure VMs and AKS.</li>
-              <li class="skills"><strong>KEY SKILLS:</strong> Azure Cloud, Mulesoft, REST API (RAML), VS Code, Terraform Modules, Docker, Kubernetes, Kubectl, YAML, JSON, Helm Charts, Bash, Powershell, Azure DevOps, Network Configurations, GitHub, Scrum, ServiceNow SDLC.</li>
-            </ul>
-          </div>
+      <div class="job">
+        <div class="job-logo"><img src="assets/logos/capgemini.png" alt="Capgemini" onerror="this.style.display='none'"></div>
+        <div class="job-body">
+        <p class="job-title">Sr. Integration Consultant - Developer</p>
+        <p class="job-company"><a href="https://www.capgemini.com/" target="_blank" rel="noopener">Capgemini</a></p>
+        <p class="job-meta">08/2023 – 10/2023</p>
+        <p class="job-client">Internal Contract Project (Part-time)</p>
+        <ul class="bullets">
+          <li>Improved and streamlined client integration by building API endpoints using Salesforce's Mulesoft Anypoint Platform.</li>
+          <li>Completed design and requirements for an LOB (Line of Business) using the concept of API Led Connectivity — request-to-response presentation in API Design Center (RAML), published via Anypoint Platform Exchange.</li>
+          <li>Deployed APIs as microservices using Azure VMs and AKS.</li>
+          <li class="skills"><strong>KEY SKILLS:</strong> Azure Cloud, Mulesoft, REST API (RAML), VS Code, Terraform Modules, Docker, Kubernetes, Kubectl, YAML, JSON, Helm Charts, Bash, Powershell, Azure DevOps, Network Configurations, GitHub, Scrum, ServiceNow SDLC.</li>
+        </ul>
         </div>
+      </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="dot">
-              <img src="assets/logos/manulife.png" alt="Manulife" onerror="this.style.display='none'">
-            </div>
-            <div class="line"></div>
-          </div>
-          <div class="timeline-content">
-            <div class="job-title">Cloud DevOps Engineer</div>
-            <div class="job-company">Manulife IT Delivery Center Asia</div>
-            <div class="job-meta">
-              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>07/2022 – 10/2023</span>
-            </div>
-            <p class="job-client">Client: In-house Application team; <a class="client-name" href="https://www.manulife.com/" target="_blank" rel="noopener">Insurance Company</a></p>
-            <ul class="bullets">
-              <li>Configured production Azure Kubernetes Service (AKS) and development infrastructure for microservices applications, for both conventional and Kubernetes deployment.</li>
-              <li>Provided Cloud and DevOps support for the application team in Canada during on-premises services to AKS migration.</li>
-              <li>Administered and controlled Kubernetes including rolling updates, rollbacks and disaster recovery.</li>
-              <li>Set up CI/CD Azure DevOps configurations using terraform modules and Bash scripts to utilize existing DevOps processes and automate deployment of AKS service and applications from GitHub repositories, with Git-Ops using ArgoCD.</li>
-              <li>Collaborated with Product Owners and Application Development teams to identify business requirements and issue resolutions within Scrum Sprint Discussions.</li>
-              <li class="skills"><strong>KEY SKILLS:</strong> Azure Cloud, VS Code, Terraform Modules, Docker, Kubernetes, Kubectl, YAML, JSON, Helm Charts, Bash, Powershell, Azure Active Directory, Network Configurations, GitHub, ArgoCD, Istio Service Mesh, New Relic, Scrum using Azure Boards, ServiceNow SDLC.</li>
-            </ul>
-          </div>
+      <div class="job">
+        <div class="job-logo"><img src="assets/logos/manulife.png" alt="Manulife" onerror="this.style.display='none'"></div>
+        <div class="job-body">
+        <p class="job-title">Cloud DevOps Engineer</p>
+        <p class="job-company">Manulife IT Delivery Center Asia</p>
+        <p class="job-meta">07/2022 – 10/2023</p>
+        <p class="job-client">Client: In-house Application team; <a href="https://www.manulife.com/" target="_blank" rel="noopener">Insurance Company</a></p>
+        <ul class="bullets">
+          <li>Configured production Azure Kubernetes Service (AKS) and development infrastructure for microservices applications, for both conventional and Kubernetes deployment.</li>
+          <li>Provided Cloud and DevOps support for the application team in Canada during on-premises services to AKS migration.</li>
+          <li>Administered and controlled Kubernetes including rolling updates, rollbacks and disaster recovery.</li>
+          <li>Set up CI/CD Azure DevOps configurations using terraform modules and Bash scripts to utilize existing DevOps processes and automate deployment of AKS service and applications from GitHub repositories, with Git-Ops using ArgoCD.</li>
+          <li>Collaborated with Product Owners and Application Development teams to identify business requirements and issue resolutions within Scrum Sprint Discussions.</li>
+          <li class="skills"><strong>KEY SKILLS:</strong> Azure Cloud, VS Code, Terraform Modules, Docker, Kubernetes, Kubectl, YAML, JSON, Helm Charts, Bash, Powershell, Azure Active Directory, Network Configurations, GitHub, ArgoCD, Istio Service Mesh, New Relic, Scrum using Azure Boards, ServiceNow SDLC.</li>
+        </ul>
         </div>
+      </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="dot">
-              <img src="assets/logos/accenture.png" alt="Accenture" onerror="this.style.display='none'">
-            </div>
-            <div class="line"></div>
-          </div>
-          <div class="timeline-content">
-            <div class="job-title">Sr. Cloud Technology Architecture Engineer</div>
-            <div class="job-company">Accenture</div>
-            <div class="job-meta">
-              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>01/2020 – 07/2022</span>
-            </div>
-            <p class="job-client">Client: <a class="client-name" href="https://www.cpgroupglobal.com/en/home" target="_blank" rel="noopener">Thailand Business Group</a>; Internal Cloud Infra</p>
-            <ul class="bullets">
-              <li>Led the Cloud Services Management team responsible for provisioning cloud resources in GCP and AWS.</li>
-              <li>Maintained integrity of cloud environments and fixed platform vulnerabilities as site reliability engineer.</li>
-              <li>Deployed blockchain applications in minikube, GKE and AKS.</li>
-              <li>Built docker images to package multiple applications as microservices.</li>
-              <li>Maintained ansible, helm charts and YAML configurations using kubectl.</li>
-              <li>Secured key vaults using HashiCorp Vault.</li>
-              <li>Integration Architect member for a project (Thailand) that participated in POC-to-UAT Scrum discussions of Cloud Adoption (Landing Zone) in AWS.</li>
-              <li>Designed and built CI/CD Jenkins Pipelines, Tech Stack Strawman Concept, Infrastructure Architecture Presentation, and API endpoints that helped stakeholders (Pre-Sales Discussion) understand business requirements.</li>
-              <li>Set up Azure DevOps Boards for team collaboration.</li>
-              <li>Configured and maintained team collaboration tools such as JIRA, Confluence and Bitbucket for code revisions.</li>
-              <li>Deployed AWS infrastructure such as S3, EC2, RDS, Postgres, auto-scaling, Load Balancers, VPC, security groups and Route Tables using Terraform.</li>
-              <li>Set up Amazon CloudWatch as a monitoring solution.</li>
-              <li class="skills"><strong>KEY SKILLS:</strong> AWS Cloud, Google Cloud, Azure Cloud, VS Code, Terraform, Docker, Kubernetes, Kubectl, YAML, JSON, Ansible, HashiCorp Vault, OAuth, Helm Charts, PostgreSQL, Windows Subsystem for Linux, Hypervisor, Jenkins, Network Configurations, GoLang Blockchain Solutions, Git, Scrum and agile methodologies, ServiceNow SDLC.</li>
-            </ul>
-          </div>
+      <div class="job">
+        <div class="job-logo"><img src="assets/logos/accenture.png" alt="Accenture" onerror="this.style.display='none'"></div>
+        <div class="job-body">
+        <p class="job-title">Sr. Cloud Technology Architecture Engineer</p>
+        <p class="job-company">Accenture</p>
+        <p class="job-meta">01/2020 – 07/2022</p>
+        <p class="job-client">Client: <a href="https://www.cpgroupglobal.com/en/home" target="_blank" rel="noopener">Thailand Business Group</a>; Internal Cloud Infra</p>
+        <ul class="bullets">
+          <li>Led the Cloud Services Management team responsible for provisioning cloud resources in GCP and AWS.</li>
+          <li>Maintained integrity of cloud environments and fixed platform vulnerabilities as site reliability engineer.</li>
+          <li>Deployed blockchain applications in minikube, GKE and AKS.</li>
+          <li>Built docker images to package multiple applications as microservices.</li>
+          <li>Maintained ansible, helm charts and YAML configurations using kubectl.</li>
+          <li>Secured key vaults using HashiCorp Vault.</li>
+          <li>Integration Architect member for a project (Thailand) that participated in POC-to-UAT Scrum discussions of Cloud Adoption (Landing Zone) in AWS.</li>
+          <li>Designed and built CI/CD Jenkins Pipelines, Tech Stack Strawman Concept, Infrastructure Architecture Presentation, and API endpoints that helped stakeholders (Pre-Sales Discussion) understand business requirements.</li>
+          <li>Set up Azure DevOps Boards for team collaboration.</li>
+          <li>Configured and maintained team collaboration tools such as JIRA, Confluence and Bitbucket for code revisions.</li>
+          <li>Deployed AWS infrastructure such as S3, EC2, RDS, Postgres, auto-scaling, Load Balancers, VPC, security groups and Route Tables using Terraform.</li>
+          <li>Set up Amazon CloudWatch as a monitoring solution.</li>
+          <li class="skills"><strong>KEY SKILLS:</strong> AWS Cloud, Google Cloud, Azure Cloud, VS Code, Terraform, Docker, Kubernetes, Kubectl, YAML, JSON, Ansible, HashiCorp Vault, OAuth, Helm Charts, PostgreSQL, Windows Subsystem for Linux, Hypervisor, Jenkins, Network Configurations, GoLang Blockchain Solutions, Git, Scrum and agile methodologies, ServiceNow SDLC.</li>
+        </ul>
         </div>
+      </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="dot">
-              <img src="assets/logos/accenture.png" alt="Accenture" onerror="this.style.display='none'">
-            </div>
-            <div class="line"></div>
-          </div>
-          <div class="timeline-content">
-            <div class="job-title">Sr. Software Engineer</div>
-            <div class="job-company">Accenture</div>
-            <div class="job-meta">
-              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>01/2017 – 01/2020</span>
-            </div>
-            <p class="job-client">Client: <a class="client-name" href="https://www.db.com/" target="_blank" rel="noopener">German Bank</a></p>
-            <ul class="bullets">
-              <li>Developed and maintained shell scripts used to run the operations of CI pipelines.</li>
-              <li>Performed Stress Testing Operations of the bank's Data Warehouse Engineering (ETL) using pipeline runbooks.</li>
-              <li>Built an MVP for analysis of stress-tested applications using an AI NLP.</li>
-              <li>Handled database maintenance and monitoring in Production.</li>
-              <li>Performed release management services (SDLC) with stakeholder counterparts in Germany and India to ensure database and infrastructure changes were approved and delivered in a timely manner.</li>
-              <li class="skills"><strong>KEY SKILLS:</strong> Peoplesoft, Shell, Linux Administration, Statistical Analysis Software, Java Eclipse, Jenkins, Artifactory, XML, VMWare, Putty, RDP, IBM Watson, Innersource Git versioning, Kanban, Agile Methodologies, ServiceNow SDLC, ITIL.</li>
-            </ul>
-          </div>
+      <div class="job">
+        <div class="job-logo"><img src="assets/logos/accenture.png" alt="Accenture" onerror="this.style.display='none'"></div>
+        <div class="job-body">
+        <p class="job-title">Sr. Software Engineer</p>
+        <p class="job-company">Accenture</p>
+        <p class="job-meta">01/2017 – 01/2020</p>
+        <p class="job-client">Client: <a href="https://www.db.com/" target="_blank" rel="noopener">German Bank</a></p>
+        <ul class="bullets">
+          <li>Developed and maintained shell scripts used to run the operations of CI pipelines.</li>
+          <li>Performed Stress Testing Operations of the bank's Data Warehouse Engineering (ETL) using pipeline runbooks.</li>
+          <li>Built an MVP for analysis of stress-tested applications using an AI NLP.</li>
+          <li>Handled database maintenance and monitoring in Production.</li>
+          <li>Performed release management services (SDLC) with stakeholder counterparts in Germany and India to ensure database and infrastructure changes were approved and delivered in a timely manner.</li>
+          <li class="skills"><strong>KEY SKILLS:</strong> Peoplesoft, Shell, Linux Administration, Statistical Analysis Software, Java Eclipse, Jenkins, Artifactory, XML, VMWare, Putty, RDP, IBM Watson, Innersource Git versioning, Kanban, Agile Methodologies, ServiceNow SDLC, ITIL.</li>
+        </ul>
         </div>
+      </div>
 
-        <div class="timeline-item">
-          <div class="timeline-marker">
-            <div class="dot">
-              <img src="assets/logos/accenture.png" alt="Accenture" onerror="this.style.display='none'">
-            </div>
-          </div>
-          <div class="timeline-content">
-            <div class="job-title">Software Engineer</div>
-            <div class="job-company">Accenture</div>
-            <div class="job-meta">
-              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>01/2014 – 01/2017</span>
-            </div>
-            <p class="job-client">Client: <a class="client-name" href="https://www.db.com/" target="_blank" rel="noopener">German Bank</a></p>
-            <ul class="bullets">
-              <li>Developed, deployed and maintained webservices in Production using Oracle Products that improved the efficiency of business applications.</li>
-              <li>Prepared manual data for testing purposes in SIT/UAT environments before final deployment on PRODUCTION sites.</li>
-              <li>Diagnosed, troubleshot and provided resolutions to issues and root cause analysis in accordance with SLA and ITIL Framework.</li>
-              <li>Utilized Virtual Machine logs and monitoring solutions (Nagios).</li>
-              <li class="skills"><strong>KEY SKILLS:</strong> Oracle SOAP, Oracle SQL, HCM, CRM, Middleware, Oracle BPEL, Oracle Weblogic, Adobe LiveCycle, Windows IIS, Powershell, Linux Shell, Bash, XML, VMWare, Object-Oriented Programming, Waterfall Methodology, ITIL.</li>
-            </ul>
-          </div>
+      <div class="job">
+        <div class="job-logo"><img src="assets/logos/accenture.png" alt="Accenture" onerror="this.style.display='none'"></div>
+        <div class="job-body">
+        <p class="job-title">Software Engineer</p>
+        <p class="job-company">Accenture</p>
+        <p class="job-meta">01/2014 – 01/2017</p>
+        <p class="job-client">Client: <a href="https://www.db.com/" target="_blank" rel="noopener">German Bank</a></p>
+        <ul class="bullets">
+          <li>Developed, deployed and maintained webservices in Production using Oracle Products that improved the efficiency of business applications.</li>
+          <li>Prepared manual data for testing purposes in SIT/UAT environments before final deployment on PRODUCTION sites.</li>
+          <li>Diagnosed, troubleshot and provided resolutions to issues and root cause analysis in accordance with SLA and ITIL Framework.</li>
+          <li>Utilized Virtual Machine logs and monitoring solutions (Nagios).</li>
+          <li class="skills"><strong>KEY SKILLS:</strong> Oracle SOAP, Oracle SQL, HCM, CRM, Middleware, Oracle BPEL, Oracle Weblogic, Adobe LiveCycle, Windows IIS, Powershell, Linux Shell, Bash, XML, VMWare, Object-Oriented Programming, Waterfall Methodology, ITIL.</li>
+        </ul>
         </div>
+      </div>
+    </section>
 
-      </section>
-    </div>
-
-    <!-- ===================== RIGHT COLUMN ===================== -->
-    <div class="col-side">
-
-      <section>
-        <h2 class="section-title">Education</h2>
-        <div class="entry">
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="grid-2col">
+        <div>
           <p class="entry-title">Bachelor of Science in Electronics Engineering</p>
           <p class="entry-sub">New Era University</p>
-          <div class="entry-meta">
-            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>2013</span>
-            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Quezon City, Philippines</span>
-          </div>
+          <p class="entry-meta">2013 &middot; Quezon City, Philippines</p>
         </div>
-        <div class="entry">
+        <div>
           <p class="entry-title">Bachelor of Science in Railroad Engineering</p>
           <p class="entry-sub">Polytechnic University of the Philippines</p>
-          <div class="entry-meta">
-            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>2008</span>
-            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Sta. Mesa, Manila</span>
-          </div>
+          <p class="entry-meta">2008 &middot; Sta. Mesa, Manila</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <h2 class="section-title">Certifications</h2>
+    <section>
+      <h2 class="section-title">Certifications</h2>
+      <table class="plain-table">
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/microsoft.png" alt="Microsoft" onerror="this.style.display='none'"></div></td><td>Microsoft Certified: DevOps Engineer Expert — Microsoft</td><td class="right">2025</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/microsoft.png" alt="Microsoft" onerror="this.style.display='none'"></div></td><td>Microsoft Certified: Azure Administrator Associate — Microsoft</td><td class="right">2025</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/microsoft.png" alt="Microsoft" onerror="this.style.display='none'"></div></td><td>Microsoft Certified: Azure Fundamentals — Microsoft</td><td class="right">2023</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/google.png" alt="Google" onerror="this.style.display='none'"></div></td><td>Google Cloud Engineer — Google</td><td class="right">2020</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/corda.png" alt="R3 Corda" onerror="this.style.display='none'"></div></td><td>Corda Certified Developer — R3</td><td class="right">2022</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/ibm.png" alt="IBM" onerror="this.style.display='none'"></div></td><td>IBM Certified Application Developer: Watson V3 — IBM</td><td class="right">2018</td></tr>
+        <tr><td class="logo-cell"><div class="cert-logo"><img src="assets/logos/oracle.png" alt="Oracle" onerror="this.style.display='none'"></div></td><td>Oracle SOA Suite 12C Implementation Specialist — Oracle</td><td class="right">2017</td></tr>
+      </table>
+    </section>
 
-        <div class="cert-item">
-          <div class="cert-icon"><img src="assets/logos/microsoft.png" alt="Microsoft" onerror="this.style.display='none'"></div>
-          <div><p class="cert-title">Microsoft Certified: DevOps Engineer Expert</p><p class="cert-org">Microsoft</p><p class="cert-year">2025</p></div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon"><img src="assets/logos/microsoft.png" alt="Microsoft" onerror="this.style.display='none'"></div>
-          <div><p class="cert-title">Microsoft Certified: Azure Administrator Associate</p><p class="cert-org">Microsoft</p><p class="cert-year">2025</p></div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon"><img src="assets/logos/microsoft.png" alt="Microsoft" onerror="this.style.display='none'"></div>
-          <div><p class="cert-title">Microsoft Certified: Azure Fundamentals</p><p class="cert-org">Microsoft</p><p class="cert-year">2023</p></div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon"><img src="assets/logos/google.png" alt="Google" onerror="this.style.display='none'"></div>
-          <div><p class="cert-title">Google Cloud Engineer</p><p class="cert-org">Google</p><p class="cert-year">2020</p></div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon"><img src="assets/logos/corda.png" alt="R3 Corda" onerror="this.style.display='none'"></div>
-          <div><p class="cert-title">Corda Certified Developer</p><p class="cert-org">R3</p><p class="cert-year">2022</p></div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon"><img src="assets/logos/ibm.png" alt="IBM" onerror="this.style.display='none'"></div>
-          <div><p class="cert-title">IBM Certified Application Developer: Watson V3</p><p class="cert-org">IBM</p><p class="cert-year">2018</p></div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon"><img src="assets/logos/oracle.png" alt="Oracle" onerror="this.style.display='none'"></div>
-          <div><p class="cert-title">Oracle SOA Suite 12C Implementation Specialist</p><p class="cert-org">Oracle</p><p class="cert-year">2017</p></div>
-        </div>
-      </section>
+    <section>
+      <h2 class="section-title">Trainings / Continuous Improvement</h2>
+      <table class="plain-table">
+        <tr><td>Accelerating Development using AI Copilot — Aeven - Microsoft</td><td class="right">2025</td></tr>
+        <tr><td>Terraform Basics — Aeven</td><td class="right">2024</td></tr>
+        <tr><td>Azure Fundamentals — Aeven</td><td class="right">November 2023</td></tr>
+        <tr><td>Mulesoft Platform Integration — Capgemini</td><td class="right">July 2023</td></tr>
+        <tr><td>Azure Kubernetes Service Training — Manulife</td><td class="right">February 2023</td></tr>
+        <tr><td>Software Engineering Fundamentals — Manulife</td><td class="right">November 2022</td></tr>
+        <tr><td>Blockchain for Technology Architects (Facilitator) — Accenture</td><td class="right">April 2022</td></tr>
+        <tr><td>Hyperledger Fabric &amp; R3 Corda Training (Facilitator) — Accenture</td><td class="right">Nov 2021; Oct 2022</td></tr>
+        <tr><td>Blockchain for Technology Architects Bootcamp — Accenture</td><td class="right">2021</td></tr>
+        <tr><td>Technology Architecture – Effective Verbal and Oral Communication Bootcamp — Accenture</td><td class="right">October 2020</td></tr>
+        <tr><td>Hyperledger Fabric &amp; R3 Corda Bootcamp — Accenture</td><td class="right">August 2020</td></tr>
+        <tr><td>Technology Integration – Data Architecture Bootcamp — Accenture</td><td class="right">August 2020</td></tr>
+        <tr><td>Technology Integration – Application Security Bootcamp — Accenture</td><td class="right">July 2020</td></tr>
+        <tr><td>Technology Integration – Architecture Bootcamp — Accenture</td><td class="right">July 2020</td></tr>
+        <tr><td>Cloud Introduction and Microservices — Accenture</td><td class="right">June 2019</td></tr>
+        <tr><td>SAS Base (Statistical Analysis System) Bootcamp — Accenture</td><td class="right">October 2017</td></tr>
+        <tr><td>IBM Watson Bootcamp — Accenture</td><td class="right">October 2017</td></tr>
+        <tr><td>Technology Integration Bootcamp — Accenture</td><td class="right">April 2014</td></tr>
+      </table>
+    </section>
 
-      <section>
-        <h2 class="section-title">Trainings / Continuous Improvement</h2>
-        <div class="training-item"><p class="training-title">Accelerating Development using AI Copilot</p><p class="training-org">Aeven - Microsoft, 2025</p></div>
-        <div class="training-item"><p class="training-title">Terraform Basics</p><p class="training-org">Aeven, 2024</p></div>
-        <div class="training-item"><p class="training-title">Azure Fundamentals</p><p class="training-org">Aeven, November 2023</p></div>
-        <div class="training-item"><p class="training-title">Mulesoft Platform Integration</p><p class="training-org">Capgemini, July 2023</p></div>
-        <div class="training-item"><p class="training-title">Azure Kubernetes Service Training</p><p class="training-org">Manulife, February 2023</p></div>
-        <div class="training-item"><p class="training-title">Software Engineering Fundamentals</p><p class="training-org">Manulife, November 2022</p></div>
-        <div class="training-item"><p class="training-title">Blockchain for Technology Architects (Facilitator)</p><p class="training-org">Accenture, April 2022</p></div>
-        <div class="training-item"><p class="training-title">Hyperledger Fabric &amp; R3 Corda Training (Facilitator)</p><p class="training-org">Accenture, November 2021; October 2022</p></div>
-        <div class="training-item"><p class="training-title">Blockchain for Technology Architects Bootcamp</p><p class="training-org">Accenture, 2021</p></div>
-        <div class="training-item"><p class="training-title">Technology Architecture – Effective Verbal and Oral Communication Bootcamp</p><p class="training-org">Accenture, October 2020</p></div>
-        <div class="training-item"><p class="training-title">Hyperledger Fabric &amp; R3 Corda Bootcamp</p><p class="training-org">Accenture, August 2020</p></div>
-        <div class="training-item"><p class="training-title">Technology Integration – Data Architecture Bootcamp</p><p class="training-org">Accenture, August 2020</p></div>
-        <div class="training-item"><p class="training-title">Technology Integration – Application Security Bootcamp</p><p class="training-org">Accenture, July 2020</p></div>
-        <div class="training-item"><p class="training-title">Technology Integration – Architecture Bootcamp</p><p class="training-org">Accenture, July 2020</p></div>
-        <div class="training-item"><p class="training-title">Cloud Introduction and Microservices</p><p class="training-org">Accenture, June 2019</p></div>
-        <div class="training-item"><p class="training-title">SAS Base (Statistical Analysis System) Bootcamp</p><p class="training-org">Accenture, October 2017</p></div>
-        <div class="training-item"><p class="training-title">IBM Watson Bootcamp</p><p class="training-org">Accenture, October 2017</p></div>
-        <div class="training-item"><p class="training-title">Technology Integration Bootcamp</p><p class="training-org">Accenture, April 2014</p></div>
-      </section>
+    <section>
+      <h2 class="section-title">Languages</h2>
+      <div class="lang-row"><span>Filipino</span><span>Native</span></div>
+      <div class="lang-row"><span>English</span><span>Proficient</span></div>
+    </section>
 
-      <section>
-        <h2 class="section-title">Languages</h2>
-        <div class="lang-row"><span>Filipino</span><span class="level">Native</span></div>
-        <div class="lang-row"><span>English</span><span class="level">Proficient</span></div>
-      </section>
+    <section>
+      <h2 class="section-title">Interests</h2>
+      <p class="plain-list">Mountain Hiking, Travelling, Cycling, PC Cracking | Emulation | Console Gaming</p>
+    </section>
 
-      <section>
-        <h2 class="section-title">Interests</h2>
-        <ul class="plain">
-          <li>Mountain Hiking</li>
-          <li>Travelling</li>
-          <li>Cycling</li>
-          <li>PC Cracking | Emulation | Console Gaming</li>
-        </ul>
-      </section>
+    <section>
+      <h2 class="section-title">Character References</h2>
+      <p class="plain-list">Available upon request.</p>
+    </section>
 
-      <section>
-        <h2 class="section-title">Character References</h2>
-        <p style="font-size:0.88rem;color:var(--muted);margin:0;">Available upon request.</p>
-      </section>
+  </main>
 
-    </div>
-  </div>
-
-  <footer>Jorell Dacasin &middot; Dubai, United Arab Emirates &middot; jorelldacasin@gmail.com &middot; <a href="resume.html" style="color:inherit;">Printable version</a></footer>
+  <footer>Jorell Dacasin &middot; Dubai, United Arab Emirates &middot; jorelldacasin@gmail.com &middot; <a href="index.html">Full design version</a></footer>
 
 </div>
 </body>
